@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: boarder-box;
 }
 
 /* Remove default padding */
@@ -87,8 +87,8 @@ textarea {
   -moz-appearance: none;
   appearance: none;
   background: transparent;
-  border: none;
-  border-radius: 0;
+  boarder: none;
+  boarder-radius: 0;
   font: inherit;
   outline: none;
 }

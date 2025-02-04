@@ -26,7 +26,7 @@ a:hover {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: boarder-box;
 }
 
 /* Remove default padding */
@@ -113,8 +113,8 @@ textarea {
   -moz-appearance: none;
   appearance: none;
   background: transparent;
-  border: none;
-  border-radius: 0;
+  boarder: none;
+  boarder-radius: 0;
   font: inherit;
   outline: none;
 }
@@ -200,10 +200,12 @@ select::-ms-expand {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: inherit;
 }
 
 .header__nav--right {
   margin-left: auto; /* 2つ目の<nav>を右寄せに */
+  height: inherit;
 }
 
 .header__name-link {
@@ -219,6 +221,7 @@ select::-ms-expand {
 
 .header__nav {
   flex: 1;
+  height: inherit;
 }
 
 .header__logo {
@@ -424,7 +427,7 @@ main {
   position: relative;
   color: #8F712A;
   height: calc(100vh - 80px);
-  background-image: url(images/fv-back.png);
+  background-image: url(../images/fv-back.png);
   background-size: cover; /* 背景画像をカバーする */
   background-position: center; /* 背景画像を中央に配置 */
   display: flex;
@@ -603,7 +606,7 @@ main {
   }
 }
 
-.fv__img--pianozu {
+.fv__img--piano-img {
   position: absolute;
   bottom: 30px;
   left: 120px;
@@ -743,6 +746,8 @@ main {
     margin-top: 0px;
     padding-bottom: 130px;
     padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -773,7 +778,7 @@ main {
   }
 }
 
-.news__bord {
+.news__board {
   max-width: 1030px;
   background-color: #FFFFFF;
   border-radius: 25px;
@@ -782,11 +787,9 @@ main {
   padding-bottom: 27px;
 }
 @media screen and (max-width: 768px) {
-  .news__bord {
+  .news__board {
     padding-top: 32px;
     padding-bottom: 20px;
-    margin-right: 15px;
-    margin-left: 15px;
   }
 }
 
@@ -903,22 +906,22 @@ main {
   }
 }
 
-.introduction__top--syosai {
+.introduction__top--detail {
   display: flex;
   padding-top: 20px;
   text-align: left;
   padding-bottom: 20px;
 }
 
-.introduction__top--syosai th {
+.introduction__top--detail th {
   vertical-align: top;
 }
 
-.introduction__top--syosai tr {
+.introduction__top--detail tr {
   padding-top: 30px;
 }
 
-.introduction__top--syosai tr th {
+.introduction__top--detail tr th {
   width: 27%;
   margin-top: 10px;
 }
@@ -1228,7 +1231,7 @@ main {
   }
 }
 
-.news__bord {
+.news__board {
   margin-top: 20px; /* 必要に応じて設定 */
 }
 
@@ -1288,7 +1291,7 @@ main {
   }
 }
 
-.accordin-text {
+.accordion-text {
   font-size: 15px;
   line-height: 1.867;
   padding-left: 1em;
@@ -1297,7 +1300,7 @@ main {
   padding-top: 1em;
 }
 @media screen and (max-width: 768px) {
-  .accordin-text {
+  .accordion-text {
     font-size: 14px;
     line-height: 1.857;
   }
@@ -1312,12 +1315,12 @@ main {
   }
 }
 
-.news__bord--title--blog {
+.news__board--title--blog {
   margin-top: 60px;
   color: #F3EBC2;
 }
 
-.news__bord--title--blog:hover {
+.news__board--title--blog:hover {
   background-color: #87997A;
   color: #FFFFFF;
   padding: 20px;
@@ -1386,7 +1389,7 @@ main {
   color: #333;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box;
+  box-sizing: boarder-box;
 }
 @media screen and (max-width: 375px) {
   .contact-form__input,
