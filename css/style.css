@@ -26,7 +26,7 @@ a:hover {
 *,
 *::before,
 *::after {
-  box-sizing: boarder-box;
+  box-sizing: border-box;
 }
 
 /* Remove default padding */
@@ -146,12 +146,11 @@ select::-ms-expand {
   left: 0;
   color: #8F712A;
   width: 100%;
-  height: 80px;
   background-color: #FFFFFF;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 30px 15px;
+  justify-content: space-around;
+  padding: 0 15px;
 }
 
 .header__name {
@@ -194,7 +193,7 @@ select::-ms-expand {
 }
 
 .header__inner {
-  max-width: 1450px;
+  max-width: 1220px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -274,6 +273,8 @@ select::-ms-expand {
 .header__link {
   font-size: 16px;
   font-weight: 500;
+  padding: 20px;
+  margin: 10px auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -287,17 +288,17 @@ select::-ms-expand {
 }
 
 .header__link--contact {
-  padding: 8px 30px;
+  padding: 20px 30px;
   border-radius: 15px;
+  margin-left: 40px;
   color: #FFFFFF;
   background-color: #87997A;
-  transition: 0.3s background-color;
-  transition: transform 0.3s ease-out, background-color 0.3s ease-out; /* 拡大と色変更を滑らかに */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header__link--contact:hover {
-  transform: scale(1.1); /* ホバー時に1.1倍拡大 */
-  opacity: 1;
-  color: #141414;
+  transform: scale(1.05);
+  opacity: 0.9;
+  box-shadow: 0 4px 12px rgba(135, 153, 122, 0.3);
 }
 
 .hamburger {
@@ -423,18 +424,37 @@ main {
 
 .fv {
   max-width: 100%;
+  width: 100%;
+  background-image: url(../images/fv-back.png);
+  min-height: 80vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .fv .fv {
+    min-height: 60vh;
+    padding: 40px 0;
+  }
+}
+
+.fv__inner {
+  max-width: 1440px;
+  margin: 0 auto;
   position: relative;
   color: #8F712A;
   height: calc(100vh - 80px);
-  background-image: url(../images/fv-back.png);
-  background-size: cover; /* 背景画像をカバーする */
-  background-position: center; /* 背景画像を中央に配置 */
+  background-size: cover;
+  background-position: center;
+  padding: 0 20px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
 }
 @media screen and (max-width: 1024px) {
-  .fv {
-    display: block;
+  .fv__inner {
+    align-items: center;
   }
 }
 
@@ -445,6 +465,7 @@ main {
   font-size: 54px;
   align-items: start;
   white-space: normal;
+  line-height: 1.4;
 }
 @media screen and (max-width: 1024px) {
   .fv__title {
@@ -462,6 +483,21 @@ main {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     z-index: 10;
+  }
+}
+
+.fv__title-2 {
+  font-size: 54px;
+  font-weight: 700;
+  display: block;
+  position: absolute;
+  top: 300px;
+  left: 214px;
+  line-height: 1.4;
+}
+@media screen and (max-width: 768px) {
+  .fv__title-2 {
+    margin-top: 1.5rem;
   }
 }
 
@@ -578,33 +614,46 @@ main {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .fv__images {
+    display: flex;
+  }
+}
+
 .fv__img--piano-img {
   position: absolute;
   bottom: 30px;
-  left: 120px;
-  width: 270px;
+  left: 50px;
+  width: 295px;
   height: auto;
   margin-top: 101px;
 }
 
 .fv__img--lesson {
-  position: absolute;
   width: 295px;
-  top: 27px;
-  right: 20%;
   height: auto;
-  transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out; /* アニメーション効果 */
-  transform-origin: center; /* 回転の中心を要素の中央に設定 */
+  margin-top: 50px;
+  margin-right: 145px;
+  margin-left: auto;
+  display: block;
+  transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+  transform-origin: center;
 }
 @media screen and (max-width: 1440px) {
   .fv__img--lesson {
-    top: 85px;
+    width: 250px;
   }
 }
 @media screen and (max-width: 1024px) {
   .fv__img--lesson {
-    top: 400px;
-    right: 36%;
+    width: 200px;
+    margin: 400px auto 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .fv__img--lesson {
+    width: 180px;
+    margin: 300px auto 0;
   }
 }
 
@@ -615,11 +664,9 @@ main {
 }
 
 .fv__img--piano {
-  position: absolute;
-  left: 41%;
-  bottom: 27px;
   width: 390px;
   height: auto;
+  margin-left: -88%;
   transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out; /* アニメーション効果 */
   transform-origin: center; /* 回転の中心を要素の中央に設定 */
 }
@@ -643,26 +690,18 @@ main {
 }
 
 .fv__img--door {
-  position: absolute;
-  right: 31px;
-  bottom: 19px;
+  margin-left: 13%;
+  margin-top: -283px;
   width: 441px;
   height: auto;
   transition: transform 0.3s ease-in-out; /* ホバー時のアニメーション */
 }
 @media screen and (max-width: 1440px) {
   .fv__img--door {
+    margin-top: -110px;
     width: 295px;
-    bottom: 170px;
-    right: 60px;
   }
 }
-@media screen and (max-width: 1024px) {
-  .fv__img--door {
-    right: 35px;
-  }
-}
-
 .fv__img--door:hover {
   transform: scale(1.1); /* 少し大きくする */
   transform: scale(1.1) rotateY(360deg); /* 拡大しながら縦軸で180度回転 */
@@ -731,7 +770,7 @@ main {
   height: auto;
   position: absolute;
   top: 130px;
-  right: -15px;
+  right: 0;
 }
 @media screen and (max-width: 768px) {
   .news__tree-right-img {
@@ -815,7 +854,8 @@ main {
 }
 
 .introduction__inner {
-  max-width: 1200px;
+  max-width: 1030px;
+  width: 100%;
   margin: 0 auto;
   display: block;
   color: #8F712A;
@@ -848,7 +888,7 @@ main {
 }
 
 .introduction__top--name tr th {
-  width: 15%;
+  width: 20%;
   vertical-align: top;
 }
 @media screen and (max-width: 375px) {
@@ -884,7 +924,7 @@ main {
 }
 
 .introduction__top--detail tr th {
-  width: 27%;
+  width: 11%;
   margin-top: 10px;
 }
 
@@ -1026,11 +1066,16 @@ main {
   }
 }
 
+.lesson-details__table--left-start {
+  margin-top: 2rem;
+}
+
 .rules__list {
   list-style: none; /* デフォルトのリストマークを削除 */
   padding: 0;
   margin: 0;
   text-align: left; /* 中央寄せを防ぐ */
+  margin-top: 2rem;
 }
 
 .rules__item {
@@ -1096,7 +1141,7 @@ main {
   margin: 0 auto;
   color: #8F712A;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 @media screen and (max-width: 375px) {
   .lesson-details__section {
@@ -1197,6 +1242,13 @@ main {
   margin-top: 20px; /* 必要に応じて設定 */
 }
 
+.news__board-inner {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  text-align-last: left;
+}
+
 .blog__accordion-title::before,
 .blog__accordion-title::after {
   position: absolute;
@@ -1275,6 +1327,11 @@ main {
   .blog__accordion-item:not(:first-child) {
     margin-top: 8px;
   }
+}
+
+.news__board--title {
+  display: flex;
+  justify-content: center;
 }
 
 .news__board--title--blog {

@@ -37,12 +37,11 @@
 
 <body>
   <header class="header">
-    <div class="header__inner">
+    <div class="header__inner md-none">
       <nav class="header__nav">
           <ul class="header__items">
               <li class="header__item"><a href="#news" class="header__link">お知らせ</a></li>
               <li class="header__item"><a href="#introduction" class="header__link">講師紹介</a></li>
-              <li class="header__item"><a href="#lesson" class="header__link">レッスン内容</a></li>
           </ul>
       </nav>
         <h1 class="header__name">
@@ -50,11 +49,11 @@
             <img class="header__logo" src="images/logo.png" alt="ヘッダーロゴ" >いちかわ<br>ピアノ教室
           </a>
         </h1>   
-      <nav class="header__nav--right md-none">
+      <nav class="header__nav--right">
           <ul class="header__items header__items--last">
-              <li class="header__item"><a href="#voice" class="header__link">VOICE</a></li>
-              <li class="header__item"><a href="#voice" class="header__link">BLOG</a></li>
-              <li class="header__item"><a href="#contact" class="header__link header__link--contact">Contact</a></li>
+            <li class="header__item"><a href="#lesson" class="header__link">レッスン内容</a></li>
+              <li class="header__item"><a href="#voice" class="header__link">生徒さんの声</a></li>
+              <li class="header__item"><a href="#contact" class="header__link header__link--contact">お問い合わせ</a></li>
           </ul>
       </nav> 
     </div> <!-- //header__inner -->
@@ -77,10 +76,7 @@
             <a href="#lesson" class="drawer-menu__link">レッスン内容</a>
           </li>
           <li class="drawer-menu__item">
-            <a href="#voice" class="drawer-menu__link">VOICE</a>
-          </li>
-          <li class="drawer-menu__item">
-            <a href="#voice" class="drawer-menu__link">BLOG</a>
+            <a href="#voice" class="drawer-menu__link">生徒さんの声</a>
           </li>
           <li class="drawer-menu__item">
             <a href="#contact" class="drawer-menu__link drawer-menu__link--contact">Contact</a>
@@ -91,58 +87,65 @@
   </header>
 
   <main>
-    <section class="fv for-top-btn--hidden" id="fv">
-      <div class="fv__gazou">
-        <img class="fv__img--green" src="images/fv-happa.png" alt="木の枝のイラスト">                         
-        <h2 class="fv__title"><span>大</span><span>人</span><span>も</span><span>子</span><span>供</span><span>も</span><span>楽</span><span>し</span><span>め</span><span>る</span><br><span>ピ</span><span>ア</span><span>ノ</span><span>教</span><span>室</span></h2>
-        <div class="fv__xl-none">
-          <img class="fv__img--note" src="images/fv-note.png" alt="">
-          <img class="fv__img--piano-img" src="images/fv-piano-img.png" alt="グランドピアノと椅子のイラスト">                           
+      <section class="fv" id="fv">
+        <div class="fv__inner">
+          <div class="fv__gazou">
+            <img class="fv__img--green" src="images/fv-happa.png" alt="木の枝のイラスト">                         
+            <h2 class="fv__title">
+              <span>大</span><span>人</span><span>も</span><span>子</span><span>供</span><span>も</span><span>楽</span><span>し</span><span>め</span><span>る</span></h2><br>
+            <div class="fv__title fv__title-2"><span>ピ</span><span>ア</span><span>ノ</span><span>教</span><span>室</span></div>
+            <div class="fv__xl-none">
+              <img class="fv__img--note" src="images/fv-note.png" alt="">
+              <img class="fv__img--piano-img" src="images/fv-pianozu.png" alt="グランドピアノと椅子のイラスト">                           
+            </div>
+          </div>
+          <div class="fv__images md-none">
+            <div class="fv__img-container">
+              <img class="fv__img--lesson" src="images/fv-lesspn.png" alt="" width="590">
+              <img class="fv__img--piano" src="images/fv-piano.png" alt="" width="590">
+              <img class="fv__img--door" src="images/fv-door.png" alt="" width="882">  
+            </div>
+          </div>  
+        <div class="swiper md-show">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/swiper01.jpg" alt="2人の子供が1台のピアノを弾いているところ">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/swiper02.jpg" alt="入口のドアの画像">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/swiper03.jpg" alt="子供が二人でピアノを弾いている画像">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/swiper04.jpg" alt="レッスンと書いてある白い看板の画像">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/swiper05.JPEG" alt="小さな女の子が一人でピアノを弾いているところ">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/swiper06.jpg" alt="ピアノ教室においてあるグランドピアノ">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/swiper08.jpg" alt="教室においてあるアップライトピアノ">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/swiper09.jpg" alt="教室のインテリアの風景">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/swiper10.jpg" alt="鍵盤のアップ画像">
+            </div>
+          </div>
+          <!-- ページネーション -->
+          <div class="swiper-pagination"></div>
+          <!-- 前後の矢印 -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-      </div>
-      <div class="fv__images md-none">
-        <img class="fv__img--lesson" src="images/fv-lesspn.png" alt="" width="590">
-        <img class="fv__img--piano" src="images/fv-piano.png" alt="" width="590">
-        <img class="fv__img--door" src="images/fv-door.png" alt="" width="882">
-      </div>
-
-      <div class="swiper md-show">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="images/swiper01.jpg" alt="2人の子供が1台のピアノを弾いているところ">
-          </div>
-          <div class="swiper-slide">
-            <img src="images/swiper02.jpg" alt="入口のドアの画像">
-          </div>
-          <div class="swiper-slide">
-            <img src="images/swiper03.jpg" alt="子供が二人でピアノを弾いている画像">
-          </div>
-          <div class="swiper-slide">
-            <img src="images/swiper04.jpg" alt="レッスンと書いてある白い看板の画像">
-          </div>
-          <div class="swiper-slide">
-            <img src="images/swiper05.JPEG" alt="小さな女の子が一人でピアノを弾いているところ">
-          </div>
-          <div class="swiper-slide">
-            <img src="images/swiper06.jpg" alt="ピアノ教室においてあるグランドピアノ">
-          </div>
-          <div class="swiper-slide">
-            <img src="images/swiper08.jpg" alt="教室においてあるアップライトピアノ">
-          </div>
-          <div class="swiper-slide">
-            <img src="images/swiper09.jpg" alt="教室のインテリアの風景">
-          </div>
-          <div class="swiper-slide">
-            <img src="images/swiper10.jpg" alt="鍵盤のアップ画像">
-          </div>
-        </div>
-        <!-- ページネーション -->
-        <div class="swiper-pagination"></div>
-        <!-- 前後の矢印 -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
       </div>
     </section>
+
+
     <section class="news" id="news">
       <img class="news__tree-left-img" src="images/tree-left.png" alt="" width="422" height="186">
       <img class="news__tree-right-img" src="images/tree-right.png" alt="" width="422" height="186">
@@ -308,34 +311,39 @@
             </div>
           </div>
           <div class="news__board">
-            <h3 class="news__board--title" id="concert">発表会・コンクール</h3>
-            <p class="lesson-details__table--left-start text">
-              発表会は１年に１回行っています。（毎年７月頃）<br>
-              参加は自由ですが、日ごろの成果を発表する場でもありますので、多くの生徒さんに
-              毎年参加していただいています。<br>
-
-              コンクールの参加も可能です。
-              毎年数多くのコンクールに出場し、賞をいただいています。
-              ピティナピアノコンクール、長野県ピアノコンクールなど大きなものから小さなコンクールまで
-              ありますので、ご相談下さい。
-              連弾部門での指導も得意としていて、多くの生徒さんが参加しています。
-            </p>
+            <div class="news__board-inner">
+              <h3 class="news__board--title" id="concert">発表会・コンクール</h3>
+              <p class="lesson-details__table--left-start text">
+                発表会は１年に１回行っています。（毎年７月頃）<br>
+                参加は自由ですが、日ごろの成果を発表する場でもありますので、多くの生徒さんに
+                毎年参加していただいています。<br>
+  
+                コンクールの参加も可能です。
+                毎年数多くのコンクールに出場し、賞をいただいています。
+                ピティナピアノコンクール、長野県ピアノコンクールなど大きなものから小さなコンクールまで
+                ありますので、ご相談下さい。
+                連弾部門での指導も得意としていて、多くの生徒さんが参加しています。
+              </p>
+  
+            </div>
             <div class="lesson-details__image">
               <img src="images/hool.jpg" alt="ピアノと盾が並んでいる画像">
               <img src="images/conpetition.jpg" alt="大きなホールで少年がピアノを演奏している様子">
             </div>
           </div>
           <div class="news__board">
-            <h3 class="news__board--title" id="rule">規約</h3>
-            <ul class="rules__list  text">
-              <li class="riles__item">・レッスンは回数制で、30分コース（入れ替え含む40分）と60分コース（入れ替え含む60分）のどちらかをお選びください</li>
-              <li class="riles__item">・振替レッスンは講師都合の場合を除き、原則として行いません。また当日の欠席はレッスンとしてカウントします</li>
-              <li class="riles__item">・駐車場の関係で、入退室時間は厳守いただいております</li>
-              <li class="riles__item">・年に4回、５００円程度の冷暖房費のご協力をいただいております</li>
-              <li class="riles__item">・発表会、コンクールのほかにも、クラス弾きあい会やクリスマスミニ発表会などにご参加いただけます</li>
-              <li class="riles__item">・入会金はありません。退会の際はひと月前までにご連絡ください</li>
-              <li class="riles__item">・その他規約は入会時にお配りするのでご確認ください</li>
-            </ul>
+            <div class="news__board-inner">
+              <h3 class="news__board--title" id="rule">規約</h3>
+              <ul class="rules__list  text">
+                <li class="riles__item">・レッスンは回数制で、30分コース（入れ替え含む40分）と60分コース（入れ替え含む60分）のどちらかをお選びください</li>
+                <li class="riles__item">・振替レッスンは講師都合の場合を除き、原則として行いません。また当日の欠席はレッスンとしてカウントします</li>
+                <li class="riles__item">・駐車場の関係で、入退室時間は厳守いただいております</li>
+                <li class="riles__item">・年に4回、５００円程度の冷暖房費のご協力をいただいております</li>
+                <li class="riles__item">・発表会、コンクールのほかにも、クラス弾きあい会やクリスマスミニ発表会などにご参加いただけます</li>
+                <li class="riles__item">・入会金はありません。退会の際はひと月前までにご連絡ください</li>
+                <li class="riles__item">・その他規約は入会時にお配りするのでご確認ください</li>
+              </ul>
+            </div>
           </div>
           <div class="reverse-lesson-btn">
             <a href="#lesson" class="reverse-lesson-btn--link">

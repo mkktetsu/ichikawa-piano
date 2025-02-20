@@ -13,12 +13,12 @@
     color: $brown;
  //   max-width: 1440px;
     width: 100%;
-    height: 80px;
+   // height: 80px;
     background-color: $white;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 30px 15px;
+    justify-content: space-around;
+    padding: 0 15px;
 }
 
 .header__name {
@@ -57,7 +57,7 @@
 }
 
 .header__inner {
-    max-width: 1450px;
+    max-width: 1220px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -121,7 +121,9 @@
 }
 .header__link {
     font-size: 16px;
-    font-weight: $medium;
+    font-weight: 500;
+    padding: 20px;
+    margin: 10px auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,17 +135,18 @@
 
 }
 .header__link--contact {
-    padding: 8px 30px;
+    padding: 20px 30px;
     border-radius: 15px;
+    margin-left: 40px;
     color: $white;
     background-color: $button;
-    transition:0.3s background-color;
-    transition: transform 0.3s ease-out, background-color 0.3s ease-out; /* 拡大と色変更を滑らかに */
-    &:hover{
-        transform: scale(1.1); /* ホバー時に1.1倍拡大 */
-        opacity: 1;
-        color: $black;
-
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+      //  color: $brown;
+        box-shadow: 0 4px 12px rgba(135, 153, 122, 0.3);
     }
 }
 //ハンバーガ―---------------------------------------
@@ -264,16 +267,45 @@ main{
 //FV
 .fv{
     max-width: 100%;
+    width: 100%;
+    background-image: url(../images/fv-back.png);
+    // margin: 0 auto;
+    // position: relative;
+    // color: $brown;
+    // height: calc(100vh - 80px);
+    //  background-size: cover; /* 背景画像をカバーする */
+    //  background-position: center; /* 背景画像を中央に配置 */
+    // display: flex;
+    // align-items: center;
+    // @include mq("lg") {
+    //     display: block;
+    min-height: 80vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 768px) {
+        .fv {
+        min-height: 60vh;
+        padding: 40px 0;
+            }
+}
+}
+.fv__inner {
+    max-width: 1440px;
+    margin: 0 auto;
     position: relative;
     color: $brown;
     height: calc(100vh - 80px);
-    background-image: url(../images/fv-back.png);
-    background-size: cover; /* 背景画像をカバーする */
-    background-position: center; /* 背景画像を中央に配置 */
+    background-size: cover;
+    background-position: center;
+    padding: 0 20px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
+    
     @include mq("lg") {
-        display: block;
+        align-items: center;
     }
 }
 .fv__title {
@@ -282,7 +314,8 @@ main{
     left: 120px;
     font-size: 54px;
     align-items: start;
-    white-space: normal;//改行させる
+    white-space: normal;
+    line-height: 1.4;
     @include mq("lg") {
         font-size: 45px;
         left: 50px;
@@ -296,6 +329,19 @@ main{
         margin-top: 1.5rem;
         margin-bottom: 1rem;
         z-index: 10;
+    }
+}
+.fv__title-2 {
+    font-size: 54px;
+    font-weight: 700;
+    display: block;
+    position: absolute;
+    top: 300px;
+    left: 214px;
+    line-height: 1.4;
+
+    @include mq("md") {
+        margin-top: 1.5rem;
     }
 }
 
@@ -362,32 +408,42 @@ main{
         position: relative;
     }
 }
+.fv__images {
+    @include mq("lg") {
+        display: flex;
+    }
+}
 
 .fv__img--piano-img {
     position: absolute;
     bottom: 30px;
-    left: 120px;
+    left: 50px;
     //margin-left: 120px;
-    width: 270px;
+    width: 295px;
     height: auto;
     //margin-left: 100px;
     margin-top: 101px;
 }
-
 .fv__img--lesson {
-    position: absolute;
     width: 295px;
-    top: 27px;
-    right: 20%;
     height: auto;
-    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out; /* アニメーション効果 */
-    transform-origin: center; /* 回転の中心を要素の中央に設定 */
+    margin-top: 50px;
+    margin-right: 145px;
+    margin-left: auto;
+    display: block;
+    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+    transform-origin: center;
+    
     @include mq(xl){
-        top: 85px;
+        width: 250px;
     }
     @include mq("lg") {
-        top: 400px;
-        right: 36%;
+        width: 200px;
+        margin: 400px auto 0;
+    }
+    @include mq("md") {
+        width: 180px;
+        margin: 300px auto 0;
     }
 }
 .fv__img--lesson:hover {
@@ -397,11 +453,12 @@ main{
     border-radius: 50%;
 }
 .fv__img--piano {
-    position: absolute;
-    left: 41%;
-    bottom: 27px;
+    //position: absolute;
+    //left: 41%;
+    //bottom: 27px;
     width: 390px;
     height: auto;
+    margin-left: -88%;
    // transition: transform 0.3s ease-in-out; /* ホバー時のアニメーション */
     transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out; /* アニメーション効果 */
     transform-origin: center; /* 回転の中心を要素の中央に設定 */
@@ -422,19 +479,22 @@ main{
 
 }
 .fv__img--door {
-    position: absolute;
-    right: 31px;
-    bottom: 19px;
+   // position: absolute;
+  //  right: 31px;
+  //  bottom: 19px;
+    margin-left: 13%;
+    margin-top: -283px;
     width: 441px;
     height: auto;
     transition: transform 0.3s ease-in-out; /* ホバー時のアニメーション */
     @include mq(xl){
+        margin-top: -110px;
         width: 295px;
-        bottom: 170px;
-        right: 60px;
+       // bottom: 170px;
+       // right: 60px;
     }
     @include mq("lg") {
-        right: 35px;
+       // right: 35px;
     }
 }
 .fv__img--door:hover {
@@ -510,7 +570,7 @@ main{
     height: auto;
     position: absolute;
     top: 130px;
-    right: -15px;
+    right: 0;
     @include mq("md") {
         max-width: 45%;
         right: 0px;
@@ -584,7 +644,8 @@ main{
     }
 }
 .introduction__inner {
-    max-width: 1200px;
+    max-width: 1030px;
+    width: 100%;
     margin: 0 auto;
     display: block;
     color: $brown;
@@ -610,7 +671,7 @@ main{
     padding-top: 30px;
 }
 .introduction__top--name tr th {
-    width: 15%;
+    width: 20%;
     vertical-align: top;
     @include mq("sp") {
         width: 20%;
@@ -639,7 +700,7 @@ main{
     padding-top: 30px;
 }
 .introduction__top--detail tr th {
-    width: 27%;
+    width: 11%;
     margin-top: 10px;
 }
 
@@ -767,17 +828,17 @@ margin-left: auto;
 
 }
 }
-// .lesson-details__table--left-start {
+.lesson-details__table--left-start {
 // width: 100%;
 // boarder-collapse: collapse;
 // text-align: left;
 // max-width: 800px;
-// margin-top: 2rem;
+    margin-top: 2rem;
 // margin-right: auto;
 // margin-left: auto;
 // padding-left: 15px;
 // padding-right: 15px;
-// }
+}
 
 
 .rules__list {
@@ -785,6 +846,7 @@ margin-left: auto;
     padding: 0;
     margin: 0;
     text-align: left; /* 中央寄せを防ぐ */
+    margin-top: 2rem;
 }
 
 .rules__item {
@@ -847,7 +909,7 @@ line-height: 1.5;
     margin: 0 auto;
     color: $brown;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     @include mq("sp") {
         display: block;
 
@@ -939,7 +1001,12 @@ line-height: 1.5;
     margin-top: 20px; /* 必要に応じて設定 */
 }
 
-
+.news__board-inner {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    text-align-last: left;
+}
 
 
 
@@ -1011,7 +1078,10 @@ line-height: 1.5;
         margin-top: 8px;         
     }
 }
-
+.news__board--title{
+    display: flex;
+    justify-content: center;
+}
 .news__board--title--blog {
     margin-top: 60px;
     color: $beige;
