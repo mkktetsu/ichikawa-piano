@@ -81,6 +81,9 @@
 .header__nav{
     flex: 1;
     height: inherit;
+    align-items: center;
+    margin: 0 auto;  
+   // display: flex;
 }
 .header__logo {
     width: 56.3px;
@@ -98,6 +101,7 @@
 .header__items {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: inherit;
     @include mq("md") {
         justify-content: center;
@@ -263,38 +267,46 @@
 //main
 main{
     padding-top: 80px;
+    @include mq("md") {
+        padding-top: 0;
+    }
 }
 //FV
 .fv{
+    overflow: hidden;
     max-width: 100%;
     width: 100%;
-    background-image: url(../images/fv-back.png);
-    // margin: 0 auto;
-    // position: relative;
-    // color: $brown;
-    // height: calc(100vh - 80px);
-    //  background-size: cover; /* 背景画像をカバーする */
-    //  background-position: center; /* 背景画像を中央に配置 */
-    // display: flex;
-    // align-items: center;
-    // @include mq("lg") {
-    //     display: block;
-    min-height: 80vh;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @media screen and (max-width: 768px) {
-        .fv {
+    height: calc(100vh - 80px);
+    position: relative;
+    z-index: 1;
+    
+    @include mq("md") {
+        height: 100vh;
         min-height: 60vh;
-        padding: 40px 0;
-            }
+       // padding: 40px 0;
+    }
 }
+.fv-bg {
+    background-image: url(../images/fv-back.png);
+    position: relative;
+    z-index: 2;
+    height: 100%; // 高さを100%に
+    padding-bottom: 0;
+    @include mq("md") {
+        height: auto; // スマホ表示時は自動調整
+        padding-bottom: 200px;
+    }
 }
+.fv__inner,
+.swiper-slide {
+  max-width: 100%;
+}
+
 .fv__inner {
+    position: relative;//丸い画像3枚のrelative
     max-width: 1440px;
     margin: 0 auto;
-    position: relative;
+  //  position: relative;
     color: $brown;
     height: calc(100vh - 80px);
     background-size: cover;
@@ -302,20 +314,20 @@ main{
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+ //   align-items: flex-end;
     
     @include mq("lg") {
         align-items: center;
     }
 }
 .fv__title {
-    position: absolute;
-    top: 200px;
-    left: 120px;
-    font-size: 54px;
+   // position: absolute;
+   // top: 200px;
+    //left: 120px;
+    font-size: 50px;
     align-items: start;
     white-space: normal;
-    line-height: 1.4;
+  //  line-height: 1.4;
     @include mq("lg") {
         font-size: 45px;
         left: 50px;
@@ -323,27 +335,40 @@ main{
     }
     @include mq("md") {
         position: static;
-        font-size: 30px;
+        font-size: 40px;
         align-items: center;
         text-align: center;
         margin-top: 1.5rem;
         margin-bottom: 1rem;
         z-index: 10;
     }
-}
-.fv__title-2 {
-    font-size: 54px;
-    font-weight: 700;
-    display: block;
-    position: absolute;
-    top: 300px;
-    left: 214px;
-    line-height: 1.4;
-
-    @include mq("md") {
-        margin-top: 1.5rem;
+    @include mq("sp") {
+        font-size: 30px;
     }
 }
+.fv__title span {
+    font-size: 45px;
+    @include mq("md") {
+        font-size: 40px;
+    }
+    @include mq("sp") {
+        font-size: 25px;
+    }
+}
+
+// .fv__title-2 {
+//     font-size: 54px;
+//     font-weight: 700;
+//     display: block;
+//     position: absolute;
+//     top: 300px;
+//     left: 214px;
+//     line-height: 1.4;
+
+//     @include mq("md") {
+//         margin-top: 1.5rem;
+//     }
+// }
 
 //タイトルが1文字ずつ落ちてくる表記
 @keyframes drop-animation {
@@ -362,27 +387,35 @@ main{
     opacity: 0;
     transform: translateY(-50px);
     animation: drop-animation 0.5s ease forwards;
+    line-height: 1.5;
   }
-  .fv__title span:nth-child(1) { animation-delay: 0.1s; }
-  .fv__title span:nth-child(2) { animation-delay: 0.2s; }
-  .fv__title span:nth-child(3) { animation-delay: 0.3s; }
+  .fv__title span:nth-child(1) { animation-delay: 0.2s; }
+  .fv__title span:nth-child(2) { animation-delay: 0.3s; }
+  .fv__title span:nth-child(3) { animation-delay: 0.5s; }
   .fv__title span:nth-child(4) { animation-delay: 0.4s; }
-  .fv__title span:nth-child(5) { animation-delay: 0.1s; }
-  .fv__title span:nth-child(6) { animation-delay: 0.6s; }
-  .fv__title span:nth-child(7) { animation-delay: 0.2s; }
-  .fv__title span:nth-child(8) { animation-delay: 0.8s; }
-  .fv__title span:nth-child(9) { animation-delay: 0.3s; }
-  .fv__title span:nth-child(10) { animation-delay: 0.5s; }
-  .fv__title span:nth-child(11) { animation-delay: 0.1s; }
-  .fv__title span:nth-child(12) { animation-delay: 0.2s; }
-  .fv__title span:nth-child(13) { animation-delay: 0.5s; }
-  .fv__title span:nth-child(14) { animation-delay: 0.4s; }
-  .fv__title span:nth-child(15) { animation-delay: 0.1s; }
+//   .fv__title span:nth-child(5) { animation-delay: 0.1s; }
+//   .fv__title span:nth-child(6) { animation-delay: 0.6s; }
+//   .fv__title span:nth-child(7) { animation-delay: 0.2s; }
+//   .fv__title span:nth-child(8) { animation-delay: 0.8s; }
+//   .fv__title span:nth-child(9) { animation-delay: 0.3s; }
+//   .fv__title span:nth-child(10) { animation-delay: 0.5s; }
+//   .fv__title span:nth-child(11) { animation-delay: 0.1s; }
+//   .fv__title span:nth-child(12) { animation-delay: 0.2s; }
+//   .fv__title span:nth-child(13) { animation-delay: 0.5s; }
+//   .fv__title span:nth-child(14) { animation-delay: 0.4s; }
+//   .fv__title span:nth-child(15) { animation-delay: 0.1s; }
   /* 必要に応じて、nth-childを追加して文字ごとに遅延を設定 */
   .fv__title {
     white-space: normal; /* 改行を有効にする */
-    display: inline;     /* 必要に応じて他の display に変更 */
-  }
+    display: inline; 
+    margin-top: 4rem;
+    z-index: 100;
+    text-align: center;
+
+    @include mq("md") {
+        margin-top: 73px;
+    }
+}
 
 .fv__xl-none {
     display: block;
@@ -394,8 +427,12 @@ main{
 .fv__img--note{
     position: absolute;
     max-width: 289px;
-    left: 320px;
-    bottom: 237px;
+    top: 150px;
+    left: 38px;;
+    @include mq("md") {
+        top: -109px;
+        right: -38%;
+    }
 }
 .fv__img--green {
     position: absolute;
@@ -404,8 +441,9 @@ main{
     max-width: 50%;
     margin-left: 10px;
     @include mq("md") {
-        max-width: 95%;
-        position: relative;
+        max-width: 83%;
+        left: 0;
+        opacity: 0.7;
     }
 }
 .fv__images {
@@ -415,35 +453,60 @@ main{
 }
 
 .fv__img--piano-img {
-    position: absolute;
-    bottom: 30px;
-    left: 50px;
-    //margin-left: 120px;
-    width: 295px;
-    height: auto;
-    //margin-left: 100px;
-    margin-top: 101px;
+    position: relative;
+    padding-top: 16%;
+    margin: 0 auto;
+    
+    @include mq("lg") {
+       // position: absolute;
+       // right: 20px;
+        top: 76%;
+        transform: translateY(-50%);
+        padding-right: 30px;
+        padding-top: 0;
+    }
+    
+    @include mq("md") {
+        top: 20%;
+        bottom: 0;
+      //  right: 200px;
+        transform: none;
+        padding-right: 15px;
+    }
+    @include mq("sp") {
+    //    display: block;
+        position: relative;
+        margin-top: 20%;
+        bottom: 0;
+        right: 12%;
+    }
 }
-.fv__img--lesson {
+
+.fv__img--piano-img img {
     width: 295px;
     height: auto;
-    margin-top: 50px;
-    margin-right: 145px;
-    margin-left: auto;
-    display: block;
+    
+    @include mq("lg") {
+        width: 220px;
+    }
+    
+    @include mq("md") {
+        width: 380px;
+    }
+}
+
+.fv__img--lesson {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: 260px;
+    right: 15%;
     transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
     transform-origin: center;
-    
-    @include mq(xl){
-        width: 250px;
-    }
-    @include mq("lg") {
-        width: 200px;
-        margin: 400px auto 0;
-    }
     @include mq("md") {
         width: 180px;
-        margin: 300px auto 0;
+        top: 247px;
+        right: 201px;
     }
 }
 .fv__img--lesson:hover {
@@ -453,22 +516,19 @@ main{
     border-radius: 50%;
 }
 .fv__img--piano {
-    //position: absolute;
-    //left: 41%;
-    //bottom: 27px;
+    position: absolute;
+    bottom: 70px;
+    right: 260%;
     width: 390px;
     height: auto;
-    margin-left: -88%;
    // transition: transform 0.3s ease-in-out; /* ホバー時のアニメーション */
     transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out; /* アニメーション効果 */
     transform-origin: center; /* 回転の中心を要素の中央に設定 */
     @include mq(xl){
         width: 290px;
-        left: 48%;
-        bottom: 70px;
     }
     @include mq("lg") {
-        left: 20px;
+
     }
 }
 .fv__img--piano:hover {
@@ -479,22 +539,22 @@ main{
 
 }
 .fv__img--door {
-   // position: absolute;
-  //  right: 31px;
-  //  bottom: 19px;
-    margin-left: 13%;
-    margin-top: -283px;
-    width: 441px;
+    position: absolute;
+    width: 330px;
     height: auto;
+    bottom: 108px;
+    left: 40px;
     transition: transform 0.3s ease-in-out; /* ホバー時のアニメーション */
     @include mq(xl){
         margin-top: -110px;
-        width: 295px;
+      //  width: 200px;
        // bottom: 170px;
        // right: 60px;
     }
-    @include mq("lg") {
-       // right: 35px;
+    @include mq("md") {
+        width: 180px;
+        bottom: 20px;
+        left: 25px;
     }
 }
 .fv__img--door:hover {
@@ -517,36 +577,61 @@ main{
 
 
 //スワイパー--------------------------------------
-
-/* PC時のスタイル */
-@media screen and (min-width: 501px) {
-    .swiper-button-prev,
-    .swiper-button-next {
+/* スワイパーの基本スタイル */
+.swiper {
+    width: 100%;
+    height: auto; // スライドの高さを明示的に指定
+    overflow: hidden;
+    position: relative;
     display: none;
-    }
-    .swiper-wrapper {
-    display: flex;
-    gap: 16px;
-    grid-template-columns: repeat(3, 1fr);
+    aspect-ratio: 16 / 9; // アスペクト比で高さを制御
+    margin-bottom: 20px;
+    @include mq("md") {
+        display: block;
     }
 }
 
-  /* 画像のサイズ調整 */
-//   .swiper-slide img {
-//     height: auto;
-//     width: 100%;
-//     object-fit: cover;
-//   }
+.swiper-wrapper {
+   // display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%; // 高さを100%に変更
+}
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; 
+}
+// ページネーションのスタイル
+.swiper-pagination {
+    position: relative;
+    margin-top: 10px;
+}
+
+// ナビゲーションボタンのスタイル
+.swiper-button-prev,
+.swiper-button-next {
+    color: $brown; // ボタンの色を変更
+}
+
 //おしらせーーーーーーーーーーーーーーーーーーー
 .news {
+    margin-top: 50px;
     position: relative;
     max-width: 100%;
     color: $brown;
-    text-align: center; // 必要に応じて削除
+    text-align: center;
     padding-top: 170px;
     padding-bottom: 142px;
     background-image: url(images/orange-back.png);
     background-color: $orange;
+    z-index: 1;
+    margin-top: -1px;
+    
     @include mq("md") {
         margin-top: 0px;
         padding-bottom: 130px;
@@ -639,6 +724,7 @@ main{
 .introduction {
     background-color: $gray;
     padding: 170px 15px 0; // 必要に応じて余白を追加
+
     @include mq("sp") {
         padding-top: 50px;
     }
@@ -647,8 +733,12 @@ main{
     max-width: 1030px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 20px;
     display: block;
     color: $brown;
+    @include mq("md") {
+        padding: 0 20px;
+    }
 }
 
 .introduction__top {
@@ -674,7 +764,9 @@ main{
     width: 20%;
     vertical-align: top;
     @include mq("sp") {
-        width: 20%;
+        width: 100%;
+        font-size: 16px;
+        display: block;
     }
 }
 .introduction__img {
@@ -698,10 +790,18 @@ main{
 }
 .introduction__top--detail tr {
     padding-top: 30px;
+
+    @include mq("md") {
+        display: flex;
+        flex-direction: column;
+    }
 }
 .introduction__top--detail tr th {
     width: 11%;
     margin-top: 10px;
+    @include mq("md") {
+        width: 100%;
+    }
 }
 
 
@@ -747,7 +847,7 @@ main{
     padding-top: 20px;
     @include mq("md") {
         padding-top: 0;
-        font-size: 18px;
+        font-size: 16px;
         }
     @include mq("sp") {
         font-size: 13px;
@@ -992,13 +1092,14 @@ line-height: 1.5;
     border-radius: 10px;
     margin: 0 20px 20px;
     @include mq("md") {
-        padding: 2px 35px 20px 10px;
+        padding: 10px 35px 10px 10px;
     }  
 }
 
 
 .news__board {
     margin-top: 20px; /* 必要に応じて設定 */
+    padding: 40px 20px 20px;
 }
 
 .news__board-inner {
@@ -1047,7 +1148,8 @@ line-height: 1.5;
     letter-spacing: 0.05em;   
     @include mq("md") {
             font-size: 14px;
-            line-height: 1.857;    
+            line-height: 1.857;
+
         }  
 
 }
@@ -1055,7 +1157,7 @@ line-height: 1.5;
     display: none;
     padding: 21px 20px;
     @include mq("md") {
-        padding: 16px 10px 24px;
+        padding: 16px 60px 24px;
            
     }
 }
@@ -1201,7 +1303,7 @@ line-height: 1.5;
 }
 .text {
     font-size: 18px;
-    @include mq("md") {
+    @include mq("lg") {
         font-size: 16px;         
     }
     @include mq("sp") {
@@ -1283,11 +1385,21 @@ line-height: 1.5;
 }
 
 
-
+.sp-none {
+    display: block;
+    @include mq("sp") {
+        display: none;
+    }
+}
 .md-none {
+    display: block;
     @include mq("md") {
         display: none;
     }
+    @include mq("sp") {
+        display: none;
+    }
+
 }
 .md-show {
     display: none;
@@ -1295,7 +1407,15 @@ line-height: 1.5;
         display: block;
     }
 }
-
+.sp-show {
+    display: none;
+    @include mq("md") {
+        display: none;
+    }
+    @include mq("sp") {
+        display: block;
+    }
+}
 .lg-none {
     display: none;
 }
