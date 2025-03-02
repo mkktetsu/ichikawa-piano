@@ -284,7 +284,7 @@ select::-ms-expand {
   height: inherit;
   color: #8F712A;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .header__link {
     font-size: 14px;
   }
@@ -610,16 +610,15 @@ main {
 @media screen and (max-width: 768px) {
   .fv__img--piano-img {
     position: relative;
-    bottom: 0;
     left: 0;
-    transform: none;
+    margin-top: 150px;
   }
 }
 @media screen and (max-width: 375px) {
   .fv__img--piano-img {
-    margin-top: 20%;
+    position: relative;
     bottom: 0;
-    right: 12%;
+    transform: none;
   }
 }
 
@@ -947,7 +946,7 @@ main {
 }
 
 .introduction__img {
-  max-width: 50%;
+  max-width: 38%;
   display: flex;
   align-items: center;
 }
@@ -1660,7 +1659,12 @@ main {
 }
 
 .lg-none {
-  display: none;
+  display: block;
+}
+@media screen and (max-width: 1024px) {
+  .lg-none {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1024px) {
