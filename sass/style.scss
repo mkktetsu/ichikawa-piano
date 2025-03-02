@@ -281,8 +281,8 @@ main{
     z-index: 1;
     
     @include mq("md") {
-        height: 100vh;
-        min-height: 60vh;
+        height: auto;
+   //     min-height: 60vh;
        // padding: 40px 0;
     }
 }
@@ -306,7 +306,6 @@ main{
     position: relative;//丸い画像3枚のrelative
     max-width: 1440px;
     margin: 0 auto;
-  //  position: relative;
     color: $brown;
     height: calc(100vh - 80px);
     background-size: cover;
@@ -314,10 +313,8 @@ main{
     padding: 0 20px;
     display: flex;
     flex-direction: column;
- //   align-items: flex-end;
-    
-    @include mq("lg") {
-        align-items: center;
+    @include mq("md") {
+        position: static;
     }
 }
 .fv__title {
@@ -325,23 +322,22 @@ main{
     align-items: start;
     white-space: normal;
   //  line-height: 1.4;
-    @include mq("lg") {
-        font-size: 45px;
-        left: 50px;
-        top: 250px;
-    }
+    // @include mq("lg") {
+    //     font-size: 45px;
+    //     left: 50px;
+    //     top: 250px;
+    // }
     @include mq("md") {
-        position: static;
-        font-size: 40px;
+    //    position: static;
+        font-size: 30px;
         align-items: center;
         text-align: center;
         margin-top: 1.5rem;
-        margin-bottom: 1rem;
         z-index: 10;
     }
-    @include mq("sp") {
-        font-size: 30px;
-    }
+    // @include mq("sp") {
+    //     font-size: 30px;
+    // }
 }
 .fv__title span {
     font-size: 45px;
@@ -367,7 +363,7 @@ main{
 //     }
 // }
 
-//タイトルが1文字ずつ落ちてくる表記
+//タイトルが順番に落ちてくる表記
 @keyframes drop-animation {
     0% {
       opacity: 0;
@@ -390,17 +386,6 @@ main{
   .fv__title span:nth-child(2) { animation-delay: 0.3s; }
   .fv__title span:nth-child(3) { animation-delay: 0.5s; }
   .fv__title span:nth-child(4) { animation-delay: 0.4s; }
-//   .fv__title span:nth-child(5) { animation-delay: 0.1s; }
-//   .fv__title span:nth-child(6) { animation-delay: 0.6s; }
-//   .fv__title span:nth-child(7) { animation-delay: 0.2s; }
-//   .fv__title span:nth-child(8) { animation-delay: 0.8s; }
-//   .fv__title span:nth-child(9) { animation-delay: 0.3s; }
-//   .fv__title span:nth-child(10) { animation-delay: 0.5s; }
-//   .fv__title span:nth-child(11) { animation-delay: 0.1s; }
-//   .fv__title span:nth-child(12) { animation-delay: 0.2s; }
-//   .fv__title span:nth-child(13) { animation-delay: 0.5s; }
-//   .fv__title span:nth-child(14) { animation-delay: 0.4s; }
-//   .fv__title span:nth-child(15) { animation-delay: 0.1s; }
   /* 必要に応じて、nth-childを追加して文字ごとに遅延を設定 */
   .fv__title {
     font-family:$base-font;
@@ -409,10 +394,10 @@ main{
     margin-top: 17rem;
     margin-left: 2.5rem;
     z-index: 100;
-   // text-align: center;
-
     @include mq("md") {
         margin-top: 73px;
+        margin-left: 0;
+
     }
 }
 
@@ -429,7 +414,7 @@ main{
     bottom: 215px;
     left: 38px;
     @include mq("md") {
-        top: -109px;
+        top: -98px;
         right: -38%;
     }
 }
@@ -457,25 +442,24 @@ main{
     left: 77px;
     margin: 0 auto;
     
-    @include mq("lg") {
-       // position: absolute;
-       // right: 20px;
-        top: 76%;
-        transform: translateY(-50%);
-        padding-right: 30px;
-        padding-top: 0;
-    }
+    // @include mq("lg") {
+    //    // position: absolute;
+    //    // right: 20px;
+    //     top: 76%;
+    //     transform: translateY(-50%);
+    //     padding-right: 30px;
+    //     padding-top: 0;
+    // }
     
     @include mq("md") {
-        top: 20%;
+        position: relative;
         bottom: 0;
-      //  right: 200px;
+        left: 0;
         transform: none;
-        padding-right: 15px;
     }
     @include mq("sp") {
     //    display: block;
-        position: relative;
+     //   position: relative;
         margin-top: 20%;
         bottom: 0;
         right: 12%;
@@ -489,11 +473,12 @@ main{
   //  right: 50%;
     
     @include mq("lg") {
+
         width: 220px;
     }
     
     @include mq("md") {
-        width: 380px;
+        width: 250px;
     }
 }
 .fv__img--up-piano {
@@ -785,7 +770,7 @@ main{
     align-items: center;
     @include mq("md") {
         max-width: 100%;
-
+        py: 30px;
     }
 }
 .introduction__top--detail {
@@ -1378,6 +1363,9 @@ line-height: 1.5;
 }
 .separator {
     padding-top: 10px;
+    @include mq("md") {
+        padding-top: 0;
+    }
 }
 .for-top-btn {
     width: 46px;

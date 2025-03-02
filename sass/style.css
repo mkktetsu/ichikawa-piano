@@ -439,8 +439,7 @@ main {
 }
 @media screen and (max-width: 768px) {
   .fv {
-    height: 100vh;
-    min-height: 60vh;
+    height: auto;
   }
 }
 
@@ -475,9 +474,9 @@ main {
   display: flex;
   flex-direction: column;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .fv__inner {
-    align-items: center;
+    position: static;
   }
 }
 
@@ -486,27 +485,13 @@ main {
   align-items: start;
   white-space: normal;
 }
-@media screen and (max-width: 1024px) {
-  .fv__title {
-    font-size: 45px;
-    left: 50px;
-    top: 250px;
-  }
-}
 @media screen and (max-width: 768px) {
   .fv__title {
-    position: static;
-    font-size: 40px;
+    font-size: 30px;
     align-items: center;
     text-align: center;
     margin-top: 1.5rem;
-    margin-bottom: 1rem;
     z-index: 10;
-  }
-}
-@media screen and (max-width: 375px) {
-  .fv__title {
-    font-size: 30px;
   }
 }
 
@@ -586,6 +571,7 @@ main {
 @media screen and (max-width: 768px) {
   .fv__title {
     margin-top: 73px;
+    margin-left: 0;
   }
 }
 
@@ -606,7 +592,7 @@ main {
 }
 @media screen and (max-width: 768px) {
   .fv__img--note {
-    top: -109px;
+    top: -98px;
     right: -38%;
   }
 }
@@ -638,25 +624,16 @@ main {
   left: 77px;
   margin: 0 auto;
 }
-@media screen and (max-width: 1024px) {
-  .fv__img--piano-img {
-    top: 76%;
-    transform: translateY(-50%);
-    padding-right: 30px;
-    padding-top: 0;
-  }
-}
 @media screen and (max-width: 768px) {
   .fv__img--piano-img {
-    top: 20%;
+    position: relative;
     bottom: 0;
+    left: 0;
     transform: none;
-    padding-right: 15px;
   }
 }
 @media screen and (max-width: 375px) {
   .fv__img--piano-img {
-    position: relative;
     margin-top: 20%;
     bottom: 0;
     right: 12%;
@@ -675,7 +652,7 @@ main {
 }
 @media screen and (max-width: 768px) {
   .fv__img--piano-img img {
-    width: 380px;
+    width: 250px;
   }
 }
 
@@ -1005,6 +982,7 @@ main {
 @media screen and (max-width: 768px) {
   .introduction__img {
     max-width: 100%;
+    py: 30px;
   }
 }
 
@@ -1645,6 +1623,11 @@ main {
 
 .separator {
   padding-top: 10px;
+}
+@media screen and (max-width: 768px) {
+  .separator {
+    padding-top: 0;
+  }
 }
 
 .for-top-btn {
