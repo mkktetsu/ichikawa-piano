@@ -139,7 +139,7 @@
 
 }
 .header__link--contact {
-    padding: 20px 30px;
+    padding: 7px 15px;
     border-radius: 15px;
     margin-left: 40px;
     color: $white;
@@ -276,8 +276,8 @@ main{
     overflow: hidden;
     max-width: 100%;
     width: 100%;
-    height: calc(100vh - 80px);
-    position: relative;
+   // height: calc(100vh - 80px);
+    //position: relative;
     z-index: 1;
     
     @include mq("md") {
@@ -290,8 +290,8 @@ main{
     background-image: url(../images/fv-back.png);
     position: relative;
     z-index: 2;
-    height: 100%; // 高さを100%に
-    padding-bottom: 0;
+    height: 100%; 
+    padding-bottom: 55px;
     @include mq("md") {
         height: auto; // スマホ表示時は自動調整
         padding-bottom: 200px;
@@ -321,9 +321,6 @@ main{
     }
 }
 .fv__title {
-   // position: absolute;
-   // top: 200px;
-    //left: 120px;
     font-size: 50px;
     align-items: start;
     white-space: normal;
@@ -406,11 +403,13 @@ main{
 //   .fv__title span:nth-child(15) { animation-delay: 0.1s; }
   /* 必要に応じて、nth-childを追加して文字ごとに遅延を設定 */
   .fv__title {
+    font-family:$base-font;
     white-space: normal; /* 改行を有効にする */
     display: inline; 
-    margin-top: 4rem;
+    margin-top: 17rem;
+    margin-left: 2.5rem;
     z-index: 100;
-    text-align: center;
+   // text-align: center;
 
     @include mq("md") {
         margin-top: 73px;
@@ -427,8 +426,8 @@ main{
 .fv__img--note{
     position: absolute;
     max-width: 289px;
-    top: 150px;
-    left: 38px;;
+    bottom: 215px;
+    left: 38px;
     @include mq("md") {
         top: -109px;
         right: -38%;
@@ -453,8 +452,9 @@ main{
 }
 
 .fv__img--piano-img {
-    position: relative;
-    padding-top: 16%;
+    position: absolute;
+    bottom: -28px;
+    left: 77px;
     margin: 0 auto;
     
     @include mq("lg") {
@@ -485,6 +485,8 @@ main{
 .fv__img--piano-img img {
     width: 295px;
     height: auto;
+    bottom: 0;
+  //  right: 50%;
     
     @include mq("lg") {
         width: 220px;
@@ -494,12 +496,20 @@ main{
         width: 380px;
     }
 }
+.fv__img--up-piano {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    bottom: 0;
+    right: 38%;
 
+
+}
 .fv__img--lesson {
     position: absolute;
-    width: 250px;
+    width: 300px;
     height: auto;
-    top: 260px;
+    top: 42px;
     right: 15%;
     transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
     transform-origin: center;
@@ -540,10 +550,10 @@ main{
 }
 .fv__img--door {
     position: absolute;
-    width: 330px;
+    width: 440px;
     height: auto;
-    bottom: 108px;
-    left: 40px;
+    bottom: -36px;
+    right: 30px;
     transition: transform 0.3s ease-in-out; /* ホバー時のアニメーション */
     @include mq(xl){
         margin-top: -110px;

@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: "Lora", serif;
+  font-family: "Noto Sans JP", serif;
 }
 
 a[href^="tel:"] {
@@ -292,7 +292,7 @@ select::-ms-expand {
 }
 
 .header__link--contact {
-  padding: 20px 30px;
+  padding: 7px 15px;
   border-radius: 15px;
   margin-left: 40px;
   color: #FFFFFF;
@@ -435,8 +435,6 @@ main {
   overflow: hidden;
   max-width: 100%;
   width: 100%;
-  height: calc(100vh - 80px);
-  position: relative;
   z-index: 1;
 }
 @media screen and (max-width: 768px) {
@@ -451,7 +449,7 @@ main {
   position: relative;
   z-index: 2;
   height: 100%;
-  padding-bottom: 0;
+  padding-bottom: 55px;
 }
 @media screen and (max-width: 768px) {
   .fv-bg {
@@ -578,11 +576,12 @@ main {
 
 /* 必要に応じて、nth-childを追加して文字ごとに遅延を設定 */
 .fv__title {
+  font-family: "Noto Sans JP", serif;
   white-space: normal; /* 改行を有効にする */
   display: inline;
-  margin-top: 4rem;
+  margin-top: 17rem;
+  margin-left: 2.5rem;
   z-index: 100;
-  text-align: center;
 }
 @media screen and (max-width: 768px) {
   .fv__title {
@@ -602,7 +601,7 @@ main {
 .fv__img--note {
   position: absolute;
   max-width: 289px;
-  top: 150px;
+  bottom: 215px;
   left: 38px;
 }
 @media screen and (max-width: 768px) {
@@ -634,8 +633,9 @@ main {
 }
 
 .fv__img--piano-img {
-  position: relative;
-  padding-top: 16%;
+  position: absolute;
+  bottom: -28px;
+  left: 77px;
   margin: 0 auto;
 }
 @media screen and (max-width: 1024px) {
@@ -666,6 +666,7 @@ main {
 .fv__img--piano-img img {
   width: 295px;
   height: auto;
+  bottom: 0;
 }
 @media screen and (max-width: 1024px) {
   .fv__img--piano-img img {
@@ -678,11 +679,19 @@ main {
   }
 }
 
+.fv__img--up-piano {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  bottom: 0;
+  right: 38%;
+}
+
 .fv__img--lesson {
   position: absolute;
-  width: 250px;
+  width: 300px;
   height: auto;
-  top: 260px;
+  top: 42px;
   right: 15%;
   transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
   transform-origin: center;
@@ -723,10 +732,10 @@ main {
 
 .fv__img--door {
   position: absolute;
-  width: 330px;
+  width: 440px;
   height: auto;
-  bottom: 108px;
-  left: 40px;
+  bottom: -36px;
+  right: 30px;
   transition: transform 0.3s ease-in-out; /* ホバー時のアニメーション */
 }
 @media screen and (max-width: 1440px) {
@@ -903,7 +912,7 @@ main {
 }
 
 .news__item-title {
-  font-family: "Lora", serif;
+  font-family: "Noto Sans JP", serif;
   width: 30%;
   text-align: left;
 }
@@ -984,6 +993,7 @@ main {
   .introduction__top--name tr th {
     width: 100%;
     font-size: 16px;
+    display: block;
   }
 }
 
