@@ -146,7 +146,6 @@ select::-ms-expand {
   left: 0;
   color: #8F712A;
   width: 100%;
-  background-color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -276,13 +275,15 @@ select::-ms-expand {
 .header__link {
   font-size: 16px;
   font-weight: 500;
-  padding: 20px;
+  color: #8F712A;
+  background-color: #F3EBC2;
+  padding: 7px 15px;
+  border-radius: 15px;
   margin: 10px auto;
   display: flex;
   align-items: center;
   justify-content: center;
   height: inherit;
-  color: #8F712A;
 }
 @media screen and (max-width: 1024px) {
   .header__link {
@@ -294,8 +295,8 @@ select::-ms-expand {
   padding: 7px 15px;
   border-radius: 15px;
   margin-left: 40px;
-  color: #FFFFFF;
-  background-color: #87997A;
+  color: #8F712A;
+  background-color: #F3EBC2;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header__link--contact:hover {
@@ -421,9 +422,6 @@ select::-ms-expand {
   background-color: #8F712A;
 }
 
-main {
-  padding-top: 80px;
-}
 @media screen and (max-width: 768px) {
   main {
     padding-top: 0;
