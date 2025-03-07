@@ -545,7 +545,7 @@ select::-ms-expand {
   font-family: "Noto Sans JP", serif;
   white-space: normal; /* 改行を有効にする */
   display: inline;
-  margin-top: 17rem;
+  margin-top: 12%;
   margin-left: 2.5rem;
   z-index: 100;
 }
@@ -729,10 +729,8 @@ select::-ms-expand {
 .swiper {
   width: 100%;
   height: auto;
-  overflow: hidden;
-  position: relative;
   display: none;
-  aspect-ratio: 16/9;
+  aspect-ratio: 4/3;
   margin-bottom: 20px;
 }
 @media screen and (max-width: 768px) {
@@ -753,8 +751,8 @@ select::-ms-expand {
 
 .swiper-slide img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 400px;
+  object-fit: cover;
 }
 
 .swiper-pagination {
@@ -1573,6 +1571,7 @@ select::-ms-expand {
 }
 
 .reverse-lesson-btn--text {
+  color: #8F712A;
   font-size: 10px;
   text-align: center;
   margin-top: 5px;

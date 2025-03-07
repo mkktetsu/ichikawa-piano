@@ -396,7 +396,7 @@ main{
     font-family:$base-font;
     white-space: normal; /* 改行を有効にする */
     display: inline; 
-    margin-top: 17rem;
+    margin-top: 12%;
     margin-left: 2.5rem;
     z-index: 100;
     @include mq("md") {
@@ -579,10 +579,10 @@ main{
 .swiper {
     width: 100%;
     height: auto; // スライドの高さを明示的に指定
-    overflow: hidden;
-    position: relative;
+  //  overflow: hidden;
+  //  position: relative;
     display: none;
-    aspect-ratio: 16 / 9; // アスペクト比で高さを制御
+    aspect-ratio: 4 / 3; // アスペクト比で高さを制御
     margin-bottom: 20px;
     @include mq("md") {
         display: block;
@@ -601,8 +601,8 @@ main{
 }
 .swiper-slide img {
     width: 100%;
-    height: auto;
-    object-fit: contain; 
+    height: 400px;
+    object-fit: cover; 
 }
 // ページネーションのスタイル
 .swiper-pagination {
@@ -1355,6 +1355,7 @@ line-height: 1.5;
   //  margin-right: 7rem;
 }
 .reverse-lesson-btn--text {
+    color: $brown;
     font-size: 10px;
     text-align: center;
     margin-top: 5px;
