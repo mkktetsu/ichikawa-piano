@@ -370,6 +370,7 @@ select::-ms-expand {
   left: 0;
   width: 100%;
   height: 100Vh;
+  background-color: #8F712A;
   opacity: 0.8;
   display: none;
 }
@@ -756,7 +757,6 @@ select::-ms-expand {
 .swiper {
   width: 100%;
   height: auto;
-  position: relative;
   display: none;
   aspect-ratio: 4/3;
   margin-bottom: 20px;
