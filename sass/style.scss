@@ -252,7 +252,6 @@
     width: 200px;
     padding-bottom: 25px;
     text-align: center;
-   // boarder-bottom: 1px solid $gray2;
 }
 .drawer-menu__contact {
     margin-top: 40px;
@@ -625,7 +624,7 @@ main{
     text-align: center;
     padding-top: 170px;
     padding-bottom: 142px;
-    background-image: url(images/orange-back.png);
+    background-image: url(/images/orange-back.png);
     background-color: $orange;
     z-index: 1;
     margin-top: -1px;
@@ -810,7 +809,7 @@ main{
     text-align: center; // 必要に応じて削除
     padding-top: 170px;
    // padding-bottom: 142px;
-    background-image: url(images/AdobeStock_wood-img.png);
+    background-image: url(/images/AdobeStock_wood-img.png);
     background-color: $beige02;
     @include mq("md") {
         padding-top: 100px;
@@ -928,7 +927,7 @@ margin-left: auto;
 }
 .lesson-details__table--left-start {
 // width: 100%;
-// boarder-collapse: collapse;
+
 // text-align: left;
 // max-width: 800px;
     margin-top: 2rem;
@@ -1008,9 +1007,8 @@ line-height: 1.5;
     color: $brown;
     display: flex;
     justify-content: space-around;
-    @include mq("sp") {
+    @include mq("md") {
         display: block;
-
     }
 }
 /* レスポンシブ対応（小さい画面向け） */
@@ -1256,7 +1254,7 @@ line-height: 1.5;
     color: #333;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: boarder-box;
+    box-sizing: border-box;
     @include mq("sp") {
         font-size: 0.8rem;
     }
@@ -1332,7 +1330,6 @@ line-height: 1.5;
         transform: scale(1.1); /* ホバー時に1.1倍拡大 */
         opacity: 1;
         color: $black;
-
     }
 }
 .reverse-lesson-btn {

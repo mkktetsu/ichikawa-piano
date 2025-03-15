@@ -260,7 +260,7 @@ select::-ms-expand {
 
 .header__item {
   height: inherit;
-  color: #141414;
+  color: hsl(148deg, 79%, 46%);
   z-index: 100;
 }
 @media screen and (max-width: 1024px) {
@@ -323,7 +323,7 @@ select::-ms-expand {
   width: 100%;
   height: 2px;
   transition: transform, 0.3s background-color;
-  background-color: #141414;
+  background-color: hsl(148deg, 79%, 46%);
 }
 
 .hamburger span:first-child(1) {
@@ -370,7 +370,7 @@ select::-ms-expand {
   left: 0;
   width: 100%;
   height: 100Vh;
-  background-color: #8F712A;
+  background-color: #F3EBC2;
   opacity: 0.8;
   display: none;
 }
@@ -802,7 +802,7 @@ select::-ms-expand {
   text-align: center;
   padding-top: 170px;
   padding-bottom: 142px;
-  background-image: url(images/orange-back.png);
+  background-image: url(/images/orange-back.png);
   background-color: #E5DAC5;
   z-index: 1;
   margin-top: -1px;
@@ -1018,7 +1018,7 @@ select::-ms-expand {
   color: #8F712A;
   text-align: center;
   padding-top: 170px;
-  background-image: url(images/AdobeStock_wood-img.png);
+  background-image: url(/images/AdobeStock_wood-img.png);
   background-color: #F9F4EC;
 }
 @media screen and (max-width: 768px) {
@@ -1228,7 +1228,7 @@ select::-ms-expand {
   display: flex;
   justify-content: space-around;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .lesson-details__section {
     display: block;
   }
@@ -1495,7 +1495,7 @@ select::-ms-expand {
   color: #333;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: boarder-box;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 375px) {
   .contact-form__input,
@@ -1581,7 +1581,7 @@ select::-ms-expand {
 .button:hover {
   transform: scale(1.1); /* ホバー時に1.1倍拡大 */
   opacity: 1;
-  color: #141414;
+  color: hsl(148deg, 79%, 46%);
 }
 
 .reverse-lesson-btn {
