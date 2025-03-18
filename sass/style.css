@@ -1332,8 +1332,7 @@ select::-ms-expand {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
-  -moz-text-align-last: left;
-       text-align-last: left;
+  text-align: justify;
 }
 
 .blog__accordion-title::before,

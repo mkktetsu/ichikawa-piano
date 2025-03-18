@@ -1,6 +1,7 @@
 @use "./base/base";
 @use "./base/reset";
-@use "./global" as *;
+@use "../global/colors" as *;
+//@use "./global/colors" as *;
 
 
 //ヘッダー---------------------------------------------------
@@ -583,9 +584,6 @@ main{
     display: none;
     aspect-ratio: 4 / 3; // アスペクト比で高さを制御
     margin-bottom: 20px;
-    @include mq("md") {
-        display: block;
-    }
 }
 
 .swiper-wrapper {
@@ -624,7 +622,7 @@ main{
     text-align: center;
     padding-top: 170px;
     padding-bottom: 142px;
-    background-image: url(/images/orange-back.png);
+    background-image: url(../images/orange-back.png);
     background-color: $orange;
     z-index: 1;
     margin-top: -1px;
@@ -1102,7 +1100,7 @@ line-height: 1.5;
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
-    text-align-last: left;
+    text-align: justify;
 }
 
 
@@ -1197,7 +1195,7 @@ line-height: 1.5;
 //コンタクト-------------------------------------------
 .contact {
     position: relative;
-    background-image: url(images/AdobeStock_wood-img.png);
+    background-image: url(../images/AdobeStock_wood-img.png);
     background-color: $yellow;
     margin: 0 auto;
     border: 1px $brown;
