@@ -145,7 +145,7 @@ select::-ms-expand {
   z-index: 1000;
   top: 0;
   left: 0;
-  color: #8F712A;
+  color: red;
   width: 100%;
   display: flex;
   align-items: center;
@@ -276,7 +276,7 @@ select::-ms-expand {
 .header__link {
   font-size: 16px;
   font-weight: 500;
-  color: #8F712A;
+  color: red;
   background-color: #F3EBC2;
   padding: 7px 15px;
   border-radius: 15px;
@@ -296,7 +296,7 @@ select::-ms-expand {
   padding: 7px 15px;
   border-radius: 15px;
   margin-left: 40px;
-  color: #8F712A;
+  color: red;
   background-color: #F3EBC2;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -413,15 +413,15 @@ select::-ms-expand {
 }
 
 .drawer-menu__link.drawer-menu__link--contact {
-  background-color: #8F712A;
+  background-color: red;
   padding: 14px 14px;
   border: none;
   transition: 0.3s background-color;
-  background-color: #8F712A;
+  background-color: red;
 }
 .drawer-menu__link.drawer-menu__link--contact:hover {
   opacity: 1;
-  background-color: #8F712A;
+  background-color: red;
 }
 
 @media screen and (max-width: 768px) {
@@ -465,7 +465,7 @@ select::-ms-expand {
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
-  color: #8F712A;
+  color: red;
   height: calc(100vh - 80px);
   background-size: cover;
   background-position: center;
@@ -761,11 +761,6 @@ select::-ms-expand {
   aspect-ratio: 4/3;
   margin-bottom: 20px;
 }
-@media screen and (max-width: 768px) {
-  .swiper {
-    display: block;
-  }
-}
 
 .swiper-wrapper {
   width: 100%;
@@ -791,18 +786,18 @@ select::-ms-expand {
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: #8F712A;
+  color: red;
 }
 
 .news {
   margin-top: 50px;
   position: relative;
   max-width: 100%;
-  color: #8F712A;
+  color: red;
   text-align: center;
   padding-top: 170px;
   padding-bottom: 142px;
-  background-image: url(/images/orange-back.png);
+  background-image: url(../images/orange-back.png);
   background-color: #E5DAC5;
   z-index: 1;
   margin-top: -1px;
@@ -924,7 +919,7 @@ select::-ms-expand {
   margin: 0 auto;
   padding: 0 20px;
   display: block;
-  color: #8F712A;
+  color: red;
 }
 @media screen and (max-width: 768px) {
   .introduction__inner {
@@ -1015,10 +1010,10 @@ select::-ms-expand {
 
 .lesson-introduction {
   max-width: 100%;
-  color: #8F712A;
+  color: red;
   text-align: center;
   padding-top: 170px;
-  background-image: url(/images/AdobeStock_wood-img.png);
+  background-image: url(../images/AdobeStock_wood-img.png);
   background-color: #F9F4EC;
 }
 @media screen and (max-width: 768px) {
@@ -1059,7 +1054,7 @@ select::-ms-expand {
 
 .lesson-overview__title {
   font-size: 21px;
-  color: #8F712A;
+  color: red;
   font-weight: bold;
   padding-top: 20px;
 }
@@ -1101,10 +1096,10 @@ select::-ms-expand {
 
 .about-lesson {
   max-width: 100%;
-  color: #8F712A;
+  color: red;
   text-align: center;
   padding-top: 50px;
-  background-image: url(images/orange-back.png);
+  background-image: url(/images/orange-back.png);
   background-color: #E5DAC5;
 }
 @media screen and (max-width: 768px) {
@@ -1170,7 +1165,7 @@ select::-ms-expand {
 }
 
 .lesson-details__table-header {
-  color: #8F712A;
+  color: red;
   background-color: #f7f3eb;
   font-weight: bold;
   padding: 10px;
@@ -1178,7 +1173,7 @@ select::-ms-expand {
 }
 
 .lesson-details__table-cell {
-  color: #8F712A;
+  color: red;
   padding: 10px;
   border: 1px solid #ddd;
   font-size: 0.95rem;
@@ -1196,7 +1191,7 @@ select::-ms-expand {
 /* 注意書きのスタイル */
 .lesson-details__note {
   font-size: 0.9rem;
-  color: #8F712A;
+  color: red;
   line-height: 1.6;
   padding-top: 1rem;
 }
@@ -1224,7 +1219,7 @@ select::-ms-expand {
 .lesson-details__section {
   max-width: 800px;
   margin: 0 auto;
-  color: #8F712A;
+  color: red;
   display: flex;
   justify-content: space-around;
 }
@@ -1271,7 +1266,7 @@ select::-ms-expand {
 
 .blog {
   max-width: 100%;
-  color: #8F712A;
+  color: red;
   background-color: #F9F4EC;
   text-align: center;
   padding-top: 170px;
@@ -1433,10 +1428,10 @@ select::-ms-expand {
 
 .contact {
   position: relative;
-  background-image: url(images/AdobeStock_wood-img.png);
+  background-image: url(../images/AdobeStock_wood-img.png);
   background-color: #EFEECF;
   margin: 0 auto;
-  border: 1px #8F712A;
+  border: 1px red;
 }
 
 /* お問い合わせフォームのベーススタイル */
@@ -1452,7 +1447,7 @@ select::-ms-expand {
 
 .contact-form__heading {
   text-align: center;
-  color: #8F712A;
+  color: red;
 }
 
 .contact-form__inner {
@@ -1539,7 +1534,7 @@ select::-ms-expand {
 
 .section-title {
   text-align: center;
-  color: #8F712A;
+  color: red;
 }
 
 .text {
@@ -1606,7 +1601,7 @@ select::-ms-expand {
 }
 
 .reverse-lesson-btn--text {
-  color: #8F712A;
+  color: red;
   font-size: 10px;
   text-align: center;
   margin-top: 5px;

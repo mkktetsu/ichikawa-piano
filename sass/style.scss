@@ -1,7 +1,6 @@
 @use "./base/base";
 @use "./base/reset";
-@use "../global/colors" as *;
-//@use "./global/colors" as *;
+@use "./global" as *;
 
 
 //ヘッダー---------------------------------------------------
@@ -131,13 +130,11 @@
     background-color: $beige;
     padding: 7px 15px;
     border-radius: 15px;
-  //  padding: 20px;
     margin: 10px auto;
     display: flex;
     align-items: center;
     justify-content: center;
     height: inherit;
-   // color: $brown;
     @include mq("lg") {
         font-size: 14px;
     }
@@ -807,7 +804,7 @@ main{
     text-align: center; // 必要に応じて削除
     padding-top: 170px;
    // padding-bottom: 142px;
-    background-image: url(/images/AdobeStock_wood-img.png);
+    background-image: url(../images/AdobeStock_wood-img.png);
     background-color: $beige02;
     @include mq("md") {
         padding-top: 100px;
@@ -880,7 +877,7 @@ main{
     text-align: center; // 必要に応じて削除
     padding-top: 50px;
   //  padding-bottom: 142px;
-    background-image: url(images/orange-back.png);
+    background-image: url(/images/orange-back.png);
     background-color: $orange;
     @include mq("md") {
         padding-top: 100px;
