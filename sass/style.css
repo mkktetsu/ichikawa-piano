@@ -145,7 +145,7 @@ select::-ms-expand {
   z-index: 1000;
   top: 0;
   left: 0;
-  color: red;
+  color: #8F712A;
   width: 100%;
   display: flex;
   align-items: center;
@@ -260,7 +260,7 @@ select::-ms-expand {
 
 .header__item {
   height: inherit;
-  color: hsl(148deg, 79%, 46%);
+  color: #8F712A;
   z-index: 100;
 }
 @media screen and (max-width: 1024px) {
@@ -276,7 +276,7 @@ select::-ms-expand {
 .header__link {
   font-size: 16px;
   font-weight: 500;
-  color: red;
+  color: #8F712A;
   background-color: #F3EBC2;
   padding: 7px 15px;
   border-radius: 15px;
@@ -296,7 +296,7 @@ select::-ms-expand {
   padding: 7px 15px;
   border-radius: 15px;
   margin-left: 40px;
-  color: red;
+  color: #8F712A;
   background-color: #F3EBC2;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -322,8 +322,8 @@ select::-ms-expand {
   display: inline-block;
   width: 100%;
   height: 2px;
-  transition: transform, 0.3s background-color;
-  background-color: hsl(148deg, 79%, 46%);
+  transition: transform, 0.3s;
+  background-color: #8F712A;
 }
 
 .hamburger span:first-child(1) {
@@ -332,7 +332,7 @@ select::-ms-expand {
 
 .hamburger span:nth-child(2) {
   top: 8px;
-  transform: 0.3s opacity;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 .hamburger span:nth-child(3) {
@@ -340,12 +340,12 @@ select::-ms-expand {
 }
 
 .hamburger.is-active {
-  top: 32px;
-  right: 20px;
+  top: 25px;
+  right: 15px;
 }
 
 .hamburger.is-active span {
-  background-color: #FFFFFF;
+  background-color: #87997A;
 }
 
 .hamburger.is-active span:first-child {
@@ -360,6 +360,11 @@ select::-ms-expand {
 .hamburger.is-active span:nth-child(3) {
   top: 15px;
   transform: rotate(45deg);
+}
+
+.fade {
+  display: block;
+  opacity: 1;
 }
 
 .drawer-menu {
@@ -401,7 +406,7 @@ select::-ms-expand {
   font-weight: 500;
   letter-spacing: 0.05em;
   line-height: 1.875;
-  color: #FFFFFF;
+  color: #8F712A;
   display: inline-block;
   width: 200px;
   padding-bottom: 25px;
@@ -413,15 +418,15 @@ select::-ms-expand {
 }
 
 .drawer-menu__link.drawer-menu__link--contact {
-  background-color: red;
+  background-color: #8F712A;
   padding: 14px 14px;
   border: none;
-  transition: 0.3s background-color;
-  background-color: red;
+  transition: 0.3s;
+  background-color: #87997A;
 }
 .drawer-menu__link.drawer-menu__link--contact:hover {
   opacity: 1;
-  background-color: red;
+  background-color: #8F712A;
 }
 
 @media screen and (max-width: 768px) {
@@ -465,7 +470,7 @@ select::-ms-expand {
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
-  color: red;
+  color: #8F712A;
   height: calc(100vh - 80px);
   background-size: cover;
   background-position: center;
@@ -757,7 +762,6 @@ select::-ms-expand {
 .swiper {
   width: 100%;
   height: auto;
-  display: none;
   aspect-ratio: 4/3;
   margin-bottom: 20px;
 }
@@ -786,14 +790,14 @@ select::-ms-expand {
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: red;
+  color: #8F712A;
 }
 
 .news {
   margin-top: 50px;
   position: relative;
   max-width: 100%;
-  color: red;
+  color: #8F712A;
   text-align: center;
   padding-top: 170px;
   padding-bottom: 142px;
@@ -919,7 +923,7 @@ select::-ms-expand {
   margin: 0 auto;
   padding: 0 20px;
   display: block;
-  color: red;
+  color: #8F712A;
 }
 @media screen and (max-width: 768px) {
   .introduction__inner {
@@ -999,7 +1003,7 @@ select::-ms-expand {
 }
 
 .introduction__top--detail tr th {
-  width: 11%;
+  width: 5rem;
   margin-top: 10px;
 }
 @media screen and (max-width: 768px) {
@@ -1010,7 +1014,7 @@ select::-ms-expand {
 
 .lesson-introduction {
   max-width: 100%;
-  color: red;
+  color: #8F712A;
   text-align: center;
   padding-top: 170px;
   background-image: url(../images/AdobeStock_wood-img.png);
@@ -1054,7 +1058,7 @@ select::-ms-expand {
 
 .lesson-overview__title {
   font-size: 21px;
-  color: red;
+  color: #8F712A;
   font-weight: bold;
   padding-top: 20px;
 }
@@ -1096,7 +1100,7 @@ select::-ms-expand {
 
 .about-lesson {
   max-width: 100%;
-  color: red;
+  color: #8F712A;
   text-align: center;
   padding-top: 50px;
   background-image: url(/images/orange-back.png);
@@ -1165,7 +1169,7 @@ select::-ms-expand {
 }
 
 .lesson-details__table-header {
-  color: red;
+  color: #8F712A;
   background-color: #f7f3eb;
   font-weight: bold;
   padding: 10px;
@@ -1173,7 +1177,7 @@ select::-ms-expand {
 }
 
 .lesson-details__table-cell {
-  color: red;
+  color: #8F712A;
   padding: 10px;
   border: 1px solid #ddd;
   font-size: 0.95rem;
@@ -1191,7 +1195,7 @@ select::-ms-expand {
 /* 注意書きのスタイル */
 .lesson-details__note {
   font-size: 0.9rem;
-  color: red;
+  color: #8F712A;
   line-height: 1.6;
   padding-top: 1rem;
 }
@@ -1219,7 +1223,7 @@ select::-ms-expand {
 .lesson-details__section {
   max-width: 800px;
   margin: 0 auto;
-  color: red;
+  color: #8F712A;
   display: flex;
   justify-content: space-around;
 }
@@ -1245,7 +1249,7 @@ select::-ms-expand {
     max-width: calc(100% - 8rem);
   }
 }
-@media screen and (max-width: 768px) and (max-width: 375px) {
+@media screen and (max-width: 768px) and (max-width: 1024px) {
   .lesson-details__list {
     max-width: 100%;
   }
@@ -1266,7 +1270,7 @@ select::-ms-expand {
 
 .blog {
   max-width: 100%;
-  color: red;
+  color: #8F712A;
   background-color: #F9F4EC;
   text-align: center;
   padding-top: 170px;
@@ -1321,6 +1325,13 @@ select::-ms-expand {
 .news__board {
   margin-top: 20px; /* 必要に応じて設定 */
   padding: 40px 20px 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (max-width: 1024px) {
+  .news__board {
+    padding: 40px 40px 20px;
+  }
 }
 
 .news__board-inner {
@@ -1359,6 +1370,11 @@ select::-ms-expand {
 
 .blog__accordion-title.is-open::after {
   opacity: 0;
+}
+
+.drawer-menu.is-open {
+  display: block;
+  opacity: 1;
 }
 
 .blog__accordion-title--text {
@@ -1431,7 +1447,7 @@ select::-ms-expand {
   background-image: url(../images/AdobeStock_wood-img.png);
   background-color: #EFEECF;
   margin: 0 auto;
-  border: 1px red;
+  border: 1px #8F712A;
 }
 
 /* お問い合わせフォームのベーススタイル */
@@ -1447,7 +1463,7 @@ select::-ms-expand {
 
 .contact-form__heading {
   text-align: center;
-  color: red;
+  color: #8F712A;
 }
 
 .contact-form__inner {
@@ -1534,7 +1550,7 @@ select::-ms-expand {
 
 .section-title {
   text-align: center;
-  color: red;
+  color: #8F712A;
 }
 
 .text {
@@ -1575,7 +1591,7 @@ select::-ms-expand {
 .button:hover {
   transform: scale(1.1); /* ホバー時に1.1倍拡大 */
   opacity: 1;
-  color: hsl(148deg, 79%, 46%);
+  color: #8F712A;
 }
 
 .reverse-lesson-btn {
@@ -1601,7 +1617,7 @@ select::-ms-expand {
 }
 
 .reverse-lesson-btn--text {
-  color: red;
+  color: #8F712A;
   font-size: 10px;
   text-align: center;
   margin-top: 5px;

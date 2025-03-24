@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.addEventListener("click", (e) => {
       if (e.target.closest(".js-hamburger")) {
         document.querySelector(".js-hamburger").classList.toggle("is-active");
-        document.querySelector(".js-drawer").classList.toggle("fade");
+        document.querySelector(".js-drawer").classList.toggle("is-open");
       }
     });
   
@@ -32,34 +32,71 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   
+
+    // Swiperを常に表示・ブレイクポイントで枚数変更
+const swiperInstance = new Swiper(".swiper", {
+  loop: true,
+  autoplay: { delay: 3000, disableOnInteraction: false },
+  speed: 1500,
+  spaceBetween: 10,
+  slidesPerView: 1, // 初期値（スマホなど）
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    500: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+    1440: {
+      slidesPerView: 5,
+    },
+  },
+});
+
+
+
     // Swiperの動的初期化
-    const breakPoint = 768;
-    let swiperInstance = null;
+    // const breakPoint = 768;
+    // let swiperInstance = null;
   
-    const initSwiper = () => {
-      swiperInstance = new Swiper(".swiper", {
-        loop: true,
-        autoplay: { delay: 3000, disableOnInteraction: false },
-        slidesPerView: 1,
-        spaceBetween: 10,
-        speed: 1500,
-        pagination: { el: ".swiper-pagination", clickable: true },
-        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-        breakpoints: { 500: { slidesPerView: 3 } },
-      });
-    };
+    // const initSwiper = () => {
+    //   swiperInstance = new Swiper(".swiper", {
+    //     loop: true,
+    //     autoplay: { delay: 3000, disableOnInteraction: false },
+    //     slidesPerView: 1,
+    //     spaceBetween: 10,
+    //     speed: 1500,
+    //     pagination: { el: ".swiper-pagination", clickable: true },
+    //     navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+    //     breakpoints: { 500: {
+    //                     slidesPerView: 5 },
+    //                     1024: {
+    //                       slidesPerView: 4 }
+    //                   },
+    //                     });
+    //                   };
   
-    const handleResize = () => {
-      if (window.innerWidth <= breakPoint && !swiperInstance) {
-        initSwiper();
-      } else if (window.innerWidth > breakPoint && swiperInstance) {
-        swiperInstance.destroy(true, true);
-        swiperInstance = null;
-      }
-    };
+    // const handleResize = () => {
+    //   if (window.innerWidth <= breakPoint && !swiperInstance) {
+    //     initSwiper();
+    //   } else if (window.innerWidth > breakPoint && swiperInstance) {
+    //     swiperInstance.destroy(true, true);
+    //     swiperInstance = null;
+    //   }
+    // };
   
-    handleResize();
-    window.addEventListener("resize", handleResize);
+    // handleResize();
+    // window.addEventListener("resize", handleResize);
   
     // トップへ戻るボタンの表示制御
     const topBtn = document.querySelector(".for-top-btn");
