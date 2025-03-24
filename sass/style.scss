@@ -259,11 +259,11 @@
     margin-top: 40px;
 }
 .drawer-menu__link.drawer-menu__link--contact {
-    background-color: $brown;
+  //  background-color: $brown;
     padding: 14px 14px;
     border: none;
     transition: 0.3s;
-    background-color: $button;
+ //   background-color: $button;
     &:hover {
         opacity: 1;
         background-color: $brown;
@@ -335,20 +335,20 @@ main{
     // }
     @include mq("md") {
     //    position: static;
-        font-size: 30px;
+        font-size: 27px;
         align-items: center;
         text-align: center;
         margin-top: 1.5rem;
         z-index: 10;
     }
-    // @include mq("sp") {
-    //     font-size: 30px;
-    // }
+    @include mq("sp") {
+        font-size: 22px;
+    }
 }
 .fv__title span {
     font-size: 45px;
     @include mq("md") {
-        font-size: 40px;
+        font-size: 35px;
     }
     @include mq("sp") {
         font-size: 25px;
@@ -382,7 +382,7 @@ main{
   }
   
   .fv__title span {
-    display: inline-block;
+    //display: inline-block;
     opacity: 0;
     transform: translateY(-50px);
     animation: drop-animation 0.5s ease forwards;
@@ -579,12 +579,18 @@ main{
 /* スワイパーの基本スタイル */
 .swiper {
     width: 100%;
-    height: auto; // スライドの高さを明示的に指定
+    height: 300px; // スライドの高さを明示的に指定
   //  overflow: hidden;
   //  position: relative;
     //display: none;
     aspect-ratio: 4 / 3; // アスペクト比で高さを制御
     margin-bottom: 20px;
+    @include mq("md") {
+        height: 250px;
+    }
+    @include mq("sp") {
+        height: 200px;
+    }
 }
 
 .swiper-wrapper {
@@ -599,7 +605,7 @@ main{
 }
 .swiper-slide img {
     width: 100%;
-    height: 400px;
+    height: 100%;
     object-fit: cover; 
 }
 // ページネーションのスタイル
