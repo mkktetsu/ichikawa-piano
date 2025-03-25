@@ -441,7 +441,9 @@ main{
         font-size: 25px;
     }
 }
-
+.font-lora {
+    font-family: $second-font;
+}
 // .fv__title-2 {
 //     font-size: 54px;
 //     font-weight: 700;
@@ -661,7 +663,6 @@ main{
     animation: rotate-image 1.5s ease-in-out;
 }
 
-
 //スワイパー--------------------------------------
 /* スワイパーの基本スタイル */
 .swiper {
@@ -671,7 +672,7 @@ main{
   //  position: relative;
     //display: none;
     aspect-ratio: 4 / 3; // アスペクト比で高さを制御
-    margin-bottom: 20px;
+   // margin-bottom: 20px;
     @include mq("md") {
         height: 250px;
     }
