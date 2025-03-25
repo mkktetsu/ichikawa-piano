@@ -1,5 +1,10 @@
 
 document.addEventListener("DOMContentLoaded", () => {
+    // ドロワーメニュー内のリンクをクリックしたらメニューを閉じる
+  const drawerLinks = document.querySelectorAll(".drawer-menu__link");
+  const hamburger = document.querySelector(".js-hamburger");
+  const drawer = document.querySelector(".js-drawer");
+
     // ハンバーガーメニュー
     document.body.addEventListener("click", (e) => {
       if (e.target.closest(".js-hamburger")) {
@@ -7,6 +12,28 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".js-drawer").classList.toggle("is-open");
       }
     });
+
+    drawerLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        document.querySelector(".js-hamburger").classList.remove("is-active");
+        document.querySelector(".js-drawer").classList.remove("is-open");
+      });
+    });
+    drawerLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        // ハンバーガーのクラスはすぐ外す
+        hamburger.classList.remove("is-active");
+    
+        // アニメーション用クラスをつけて
+        drawer.classList.add("is-closing");
+    
+        // アニメーション後にドロワーを閉じる
+        setTimeout(() => {
+          drawer.classList.remove("is-open", "is-closing");
+        }, 400); // CSSのanimationと同じ時間にする
+      });
+    });
+    
   
     // アコーディオン
     const accordionTitles = document.querySelectorAll(".js-accordion__title");
@@ -63,40 +90,6 @@ const swiperInstance = new Swiper(".swiper", {
   },
 });
 
-
-
-    // Swiperの動的初期化
-    // const breakPoint = 768;
-    // let swiperInstance = null;
-  
-    // const initSwiper = () => {
-    //   swiperInstance = new Swiper(".swiper", {
-    //     loop: true,
-    //     autoplay: { delay: 3000, disableOnInteraction: false },
-    //     slidesPerView: 1,
-    //     spaceBetween: 10,
-    //     speed: 1500,
-    //     pagination: { el: ".swiper-pagination", clickable: true },
-    //     navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-    //     breakpoints: { 500: {
-    //                     slidesPerView: 5 },
-    //                     1024: {
-    //                       slidesPerView: 4 }
-    //                   },
-    //                     });
-    //                   };
-  
-    // const handleResize = () => {
-    //   if (window.innerWidth <= breakPoint && !swiperInstance) {
-    //     initSwiper();
-    //   } else if (window.innerWidth > breakPoint && swiperInstance) {
-    //     swiperInstance.destroy(true, true);
-    //     swiperInstance = null;
-    //   }
-    // };
-  
-    // handleResize();
-    // window.addEventListener("resize", handleResize);
   
     // トップへ戻るボタンの表示制御
     const topBtn = document.querySelector(".for-top-btn");
@@ -118,3 +111,11 @@ const swiperInstance = new Swiper(".swiper", {
     }, 500);
   });
   
+//音符の動き
+  document.addEventListener("DOMContentLoaded", () => {
+    const notes = document.querySelectorAll(".fv__note");
+  
+    notes.forEach((note) => {
+      note.classList.add("is-animated");
+    });
+  });
