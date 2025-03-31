@@ -1400,6 +1400,11 @@ select::-ms-expand {
   margin-right: auto;
   gap: 10%;
 }
+@media screen and (max-width: 768px) {
+  .lesson-details__image {
+    max-width: 50%;
+  }
+}
 
 .lesson-details__image img {
   height: auto;
@@ -1457,6 +1462,11 @@ select::-ms-expand {
   .blog__accordion-title {
     padding: 10px 35px 10px 10px;
   }
+}
+
+.accordion__content:first-of-type {
+  display: block;
+  max-height: none;
 }
 
 .news__board {

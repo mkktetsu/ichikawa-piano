@@ -1135,6 +1135,9 @@ line-height: 1.5;
     margin-left: auto;
     margin-right: auto;
     gap: 10%;
+    @include mq("md") {
+        max-width: 50%;
+    } 
 }
 .lesson-details__image img {
     height: auto;
@@ -1183,6 +1186,10 @@ line-height: 1.5;
     @include mq("md") {
         padding: 10px 35px 10px 10px;
     }  
+}
+.accordion__content:first-of-type {
+    display: block;
+    max-height: none;
 }
 
 
