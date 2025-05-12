@@ -648,13 +648,25 @@ select::-ms-expand {
   white-space: normal; /* 改行を有効にする */
   display: inline;
   margin-top: 12%;
-  margin-left: 2.5rem;
+  margin-left: 2rem;
   z-index: 100;
 }
 @media screen and (max-width: 768px) {
   .fv__title {
     margin-top: 73px;
     margin-left: 0;
+  }
+}
+
+.fv__title.fv__title--slim {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 400;
+  font-size: 30px;
+}
+@media screen and (max-width: 768px) {
+  .fv__title.fv__title--slim {
+    font: 23px;
+    font-weight: 300;
   }
 }
 

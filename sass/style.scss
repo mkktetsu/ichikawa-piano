@@ -487,15 +487,22 @@ main{
     white-space: normal; /* 改行を有効にする */
     display: inline; 
     margin-top: 12%;
-    margin-left: 2.5rem;
+    margin-left: 2rem;
     z-index: 100;
     @include mq("md") {
         margin-top: 73px;
         margin-left: 0;
-
     }
 }
-
+.fv__title.fv__title--slim{
+    font-family: $base-font;
+    font-weight: 400;
+    font-size: 30px;
+    @include mq("md") {
+        font: 23px;
+        font-weight: 300;
+    }
+}
 .fv__xl-none {
     display: block;
     @include mq("lg") {
