@@ -1044,12 +1044,18 @@ margin-left: auto;
     margin: 0;
     text-align: left; /* 中央寄せを防ぐ */
     margin-top: 2rem;
+
+    list-style-position: outside; /* ビュレットをリストの外側に */
+    padding-left: 1.5em; /* ビュレットの分のスペースを確保 */
 }
 
 .rules__item {
     position: relative;
     padding-left: 1.2em; /* 左側に余白を作る */
     line-height: 1.6;
+
+    text-indent: -1rem; /* 最初の行だけ左にずらす */
+    padding-left: 1rem; /* 全体を右に寄せて帳尻を合わせる */
 }
 .lesson-details__table-header {
 color: $brown;
@@ -1485,14 +1491,15 @@ line-height: 1.5;
     }
 }
 .for-top-btn {
-    width: 46px;
+    width: 280px;
     aspect-ratio: 1/1;
     position: fixed;
-    bottom: 40px;
-    right: 40px;
+    bottom: 20px;
+    right: -20px;
+    z-index: 2000;
     @include mq("lg") {
         bottom: 15px;
-        right: 15px;
+        right: -30px;
     }
 }
 .for-top-btn.hidden {
