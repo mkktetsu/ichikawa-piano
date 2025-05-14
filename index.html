@@ -128,8 +128,8 @@
       <div class="news__innner">
         <h2 class="section-title">お知らせ</h2>
         <div class="news__board">
-          <ul class="news__items text">
-            <li> 
+          <ul  id="ameblo-feed" class="news__items text">
+            <!-- <li>
               <dl class="news__item">
                 <dt class="news__item-title">レッスン可能時間</dt>
                 <dd class="news__item-main">〇曜日〇時～</dd>
@@ -148,9 +148,27 @@
                 <dd class="news__item-main">お知らせの内容お知らせの内容お知らせの内容お知らせの内容お知らせの内容お知ら
                   せの内容お知</dd>
               </dl>
-            </li>
+            </li> -->
           </ul>
         </div>
+        <script>
+          fetch('https://rss2json.com/api.json?rss_url=https://ameblo.jp/animprin0ma0/rss20.xml')
+            .then(response => response.json())
+            .then(data => {
+              const container = document.getElementById('ameblo-feed');
+              const items = data.items.slice(0, 5); // 最新3件を取得
+              items.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                  <dl class="news__item">
+                    <dt class="news__item-title">${new Date(item.pubDate).toLocaleDateString()}</dt>
+                    <dd class="news__item-main"><a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.title}</a></dd>
+                  </dl>
+                `;
+                container.appendChild(li);
+              });
+            });
+        </script>
       </div>
     </section>
     <section class="introduction" id="introduction">
@@ -368,8 +386,16 @@
             </div>
           </div>
         </div>
-        <h3 class="button"><a href="https://ameblo.jp/animprin0ma0/theme-10115006859.html" class="button">ブログはこちら‼</a></h3>
-        <p>↑アメブロに飛びます</p>
+        <div class="blog__link">
+          <div>
+            <h3 class="button"><a href="https://ameblo.jp/animprin0ma0/theme-10115006859.html" class="button">ブログはこちら‼</a></h3>
+            <p>↑過去のブログはこちら！</p>
+          </div>
+          <div>
+            <h3 class="button"><a href="https://ameblo.jp/animprin0ma0/theme-10115006859.html" class="button">ブログはこちら‼</a></h3>
+            <p>↑最新ブログはこちらから！</p>
+          </div>
+        </div>
       </div>
     </section><!--blog-->
     <div class="swiper">

@@ -998,6 +998,16 @@ select::-ms-expand {
   }
 }
 
+.news__item-main a {
+  color: #8F712A;
+  text-decoration: none;
+  font-weight: 500;
+}
+.news__item-main a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
 .introduction {
   background-color: #F7F7F7;
   padding: 170px 15px 0;
