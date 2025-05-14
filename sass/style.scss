@@ -1135,6 +1135,10 @@ line-height: 1.5;
         padding: 10px 35px 10px 10px;
     }
 }
+.blog__link {
+    display: flex;
+    justify-content: space-evenly;
+}
 .accordion__content:first-of-type {
     display: block;
     max-height: none;

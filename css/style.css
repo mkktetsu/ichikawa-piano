@@ -1432,6 +1432,11 @@ select::-ms-expand {
   }
 }
 
+.blog__link {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .accordion__content:first-of-type {
   display: block;
   max-height: none;
