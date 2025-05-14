@@ -222,6 +222,7 @@ select::-ms-expand {
   height: inherit;
   align-items: center;
   margin: 0 auto;
+  padding-top: 1rem;
 }
 
 .header__logo {
